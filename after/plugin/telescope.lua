@@ -40,6 +40,16 @@ require("telescope").setup {
                 ["/"] = actions.select_vertical,
             }
         },
+        vimgrep_arguments = {
+            "rg",
+            "--fixed-strings",
+            "--color=never",
+            "--no-heading",
+            "--with-filename",
+            "--line-number",
+            "--column",
+            "--smart-case"
+        }
     },
     pickers = {
         buffers = {
