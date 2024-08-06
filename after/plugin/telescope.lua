@@ -23,6 +23,9 @@ vim.keymap.set('n', '<leader>fg', builtin.git_files, {})
 local actions = require "telescope.actions"
 require("telescope").setup {
     defaults = {
+        layout_config = {
+            horizontal = { width = 0.9 }
+        },
         mappings = {
             i = {
                 ["<Tab>"] = actions.select_default,
