@@ -27,7 +27,7 @@ require('lspconfig').rust_analyzer.setup({
         ['rust-analyzer'] = {
             completion = {
                 autoimport = {
-                    enable = false,
+                    enable = true,
                 }
             }
         }
