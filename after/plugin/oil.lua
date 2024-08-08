@@ -1,12 +1,15 @@
 require("oil").setup({
     columns = {},
     delete_to_trash = true,
+    default_file_explorer = true,
     keymaps = {
         ["<C-/>"] = "actions.select_vsplit",
         ["<TAB>"] = "actions.select",
         ["<C-r>"] = "actions.refresh",
-        ["<leader>h"] = "actions.toggle_hidden",
         ["<BS>"] = "actions.parent",
+        ["`"] = "actions.cd",
+        ["g."] = "actions.toggle_hidden",
+        ["gs"] = "actions.change_sort"
     },
     view_options = {
         -- Show files and directories that start with "."
@@ -30,5 +33,11 @@ vim.api.nvim_set_keymap(
     "n",
     "<leader>.",
     "<cmd>Oil<CR>",
+    { noremap = true }
+)
+vim.api.nvim_set_keymap(
+    "n",
+    "<leader><leader>",
+    "<cmd>Oil .<CR>",
     { noremap = true }
 )

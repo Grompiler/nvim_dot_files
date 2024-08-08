@@ -65,15 +65,7 @@ require("telescope").setup {
     },
 }
 
-require("telescope").load_extension "file_browser"
 require('telescope').load_extension "project"
-
-vim.api.nvim_set_keymap(
-    "n",
-    "<leader><leader>",
-    "<cmd>Telescope file_browser<CR>",
-    { noremap = true }
-)
 
 vim.api.nvim_set_keymap(
     'n',
